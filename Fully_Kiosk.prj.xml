@@ -1,0 +1,133 @@
+<TaskerData sr="" dvi="1" tv="5.9.2">
+	<Profile sr="prof16" ve="2">
+		<cdate>1585499890028</cdate>
+		<clp>true</clp>
+		<edate>1585501845781</edate>
+		<flags>8</flags>
+		<id>16</id>
+		<mid0>17</mid0>
+		<Event sr="con0" ve="2">
+			<code>210</code>
+		</Event>
+	</Profile>
+	<Profile sr="prof18" ve="2">
+		<cdate>1585500015334</cdate>
+		<clp>true</clp>
+		<edate>1585502096642</edate>
+		<flags>8</flags>
+		<id>18</id>
+		<mid0>15</mid0>
+		<mid1>17</mid1>
+		<App sr="con0" ve="2">
+			<cls0>de.ozerov.fully.MainActivity</cls0>
+			<flags>2</flags>
+			<label0>Fully Kiosk Browser</label0>
+			<pkg0>de.ozerov.fully</pkg0>
+		</App>
+	</Profile>
+	<Profile sr="prof20" ve="2">
+		<cdate>1585500015334</cdate>
+		<clp>true</clp>
+		<edate>1585502251472</edate>
+		<flags>8</flags>
+		<id>20</id>
+		<mid0>15</mid0>
+		<App sr="con0" ve="2">
+			<cls0>de.ozerov.fully.MainActivity</cls0>
+			<flags>2</flags>
+			<label0>Fully Kiosk Browser</label0>
+			<pkg0>de.ozerov.fully</pkg0>
+		</App>
+		<Event sr="con1" ve="2">
+			<code>208</code>
+		</Event>
+	</Profile>
+	<Profile sr="prof21" ve="2">
+		<cdate>1585502210005</cdate>
+		<edate>1585502273735</edate>
+		<flags>8</flags>
+		<id>21</id>
+		<limit>true</limit>
+		<mid0>8</mid0>
+		<nme>sensore_luminosita</nme>
+		<Event sr="con0" ve="2">
+			<code>3050</code>
+			<pri>0</pri>
+			<Str sr="arg0" ve="3">%LIGHT</Str>
+			<Str sr="arg1" ve="3"/>
+			<Int sr="arg2" val="0"/>
+		</Event>
+	</Profile>
+	<Project sr="proj0" ve="2">
+		<cdate>1585502119854</cdate>
+		<name>Fully Kiosk</name>
+		<pids>21,16,20,18</pids>
+		<tids>8,17,15</tids>
+	</Project>
+	<Task sr="task15">
+		<cdate>1585499797200</cdate>
+		<edate>1585502251472</edate>
+		<id>15</id>
+		<nme>Attiva</nme>
+		<Action sr="act0" ve="7">
+			<code>159</code>
+			<Str sr="arg0" ve="3">sensore_luminosita</Str>
+			<Int sr="arg1" val="1"/>
+		</Action>
+	</Task>
+	<Task sr="task17">
+		<cdate>1585499898865</cdate>
+		<edate>1585501115641</edate>
+		<id>17</id>
+		<nme>Disattiva</nme>
+		<pri>1006</pri>
+		<Action sr="act0" ve="7">
+			<code>159</code>
+			<Str sr="arg0" ve="3">sensore_luminosita</Str>
+			<Int sr="arg1" val="0"/>
+		</Action>
+	</Task>
+	<Task sr="task8">
+		<cdate>1585495715758</cdate>
+		<edate>1585561070713</edate>
+		<id>8</id>
+		<nme>Mqtt Luce</nme>
+		<pri>6</pri>
+		<Action sr="act0" ve="7">
+			<code>163134030</code>
+			<Bundle sr="arg0">
+				<Vals sr="val">
+					<ClientID>Tablet lux</ClientID>
+					<ClientID-type>java.lang.String</ClientID-type>
+					<Password>XXXXXXXXXXXX</Password>
+					<Password-type>java.lang.String</Password-type>
+					<Payload>%LIGHT</Payload>
+					<Payload-type>java.lang.String</Payload-type>
+					<Port>1883</Port>
+					<Port-type>java.lang.String</Port-type>
+					<QoS>2131296278</QoS>
+					<QoS-type>java.lang.Integer</QoS-type>
+					<Retain>false</Retain>
+					<Retain-type>java.lang.Boolean</Retain-type>
+					<SSL>false</SSL>
+					<SSL-type>java.lang.Boolean</SSL-type>
+					<Server>192.168.1.172</Server>
+					<Server-type>java.lang.String</Server-type>
+					<Topic>Livello_luce</Topic>
+					<Topic-type>java.lang.String</Topic-type>
+					<Username>madmicio</Username>
+					<Username-type>java.lang.String</Username-type>
+					<com.twofortyfouram.locale.intent.extra.BLURB>192.168.1.172:1883 =&gt; Livello_luce QoS:1</com.twofortyfouram.locale.intent.extra.BLURB>
+					<com.twofortyfouram.locale.intent.extra.BLURB-type>java.lang.String</com.twofortyfouram.locale.intent.extra.BLURB-type>
+					<net.dinglisch.android.tasker.extras.VARIABLE_REPLACE_KEYS>Topic Payload ClientID Password Username Port Server</net.dinglisch.android.tasker.extras.VARIABLE_REPLACE_KEYS>
+					<net.dinglisch.android.tasker.extras.VARIABLE_REPLACE_KEYS-type>java.lang.String</net.dinglisch.android.tasker.extras.VARIABLE_REPLACE_KEYS-type>
+					<net.dinglisch.android.tasker.subbundled>true</net.dinglisch.android.tasker.subbundled>
+					<net.dinglisch.android.tasker.subbundled-type>java.lang.Boolean</net.dinglisch.android.tasker.subbundled-type>
+				</Vals>
+			</Bundle>
+			<Str sr="arg1" ve="3">net.nosybore.mqttpublishplugin</Str>
+			<Str sr="arg2" ve="3">net.nosybore.mqttpublishplugin.EditActivity</Str>
+			<Int sr="arg3" val="0"/>
+		</Action>
+	</Task>
+</TaskerData>
